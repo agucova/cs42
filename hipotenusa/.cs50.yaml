@@ -1,0 +1,40 @@
+check50:
+  checks:
+    corre:
+      - run: python3 hipotenusa.py
+        exit: 0
+    triangulo_1:
+      - run: python3 hipotenusa.py
+      stdin:
+        - 3
+        - 4
+      stdout: 5
+      exit: 0
+    triangulo_2:
+      - run: python3 hipotenusa.py
+      stdin:
+        - 6
+        - 8
+      stdout: 10
+      exit: 0
+    triangulo_3:
+      - run: python3 hipotenusa.py
+      stdin:
+        - 5
+        - 12
+      stdout: 13
+      exit: 0
+    triangulo_4:
+      - run: python3 hipotenusa.py
+      stdin:
+        - 120
+        - 209
+      stdout: 241
+      exit: 0
+    triangulo_5:
+      - run: python3 hipotenusa.py
+      stdin:
+        - 32
+        - 255
+      stdout: 257
+      exit: 0
