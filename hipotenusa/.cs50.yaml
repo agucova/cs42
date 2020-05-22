@@ -1,4 +1,7 @@
 check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require hipotenusa.py
   checks:
     triangulo_1:
       - run: python3 hipotenusa.py
@@ -57,6 +60,4 @@ check50:
         stdout: "Hipotenusa: 277"
         exit: 0
 submit50:
-  files:
-    - !exclude "*"
-    - !require hipotenusa.py
+  files: *check50_files

@@ -1,6 +1,11 @@
 check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require hola.py
   checks:
     el programa dice hola mundo:
       - run: python3 hola.py
         stdout: "Hola, mundo!"
         exit: 0
+submit50:
+  files: *check50_files
