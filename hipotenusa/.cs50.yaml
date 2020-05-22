@@ -56,4 +56,7 @@ check50:
           - 252
         stdout: "Hipotenusa: 277"
         exit: 0
-submit50: true
+submit50:
+  files:
+    - !exclude "*"
+    - !require hipotenusa.py
