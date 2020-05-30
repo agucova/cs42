@@ -1,0 +1,105 @@
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require spacex.py
+    - !require comprobar_criterios.py
+  checks:
+    lanzamiento_0:
+      - run: python3 comprobar_criterios.py
+        stdin:
+          - "si"
+          - "si"
+          - "no"
+        stdout: "Veredicto: detener"
+        exit: 0
+    lanzamiento_1:
+      - run: python3 comprobar_criterios.py
+        stdin:
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "no"
+        stdout: "Veredicto: detener"
+        exit: 0
+    lanzamiento_2:
+      - run: python3 comprobar_criterios.py
+        stdin:
+          - "no"
+        stdout: "Veredicto: detener"
+        exit: 0
+    lanzamiento_3:
+      - run: python3 comprobar_criterios.py
+        stdin:
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "no"
+        stdout: "Veredicto: retrasar"
+        exit: 0
+    lanzamiento_4:
+      - run: python3 comprobar_criterios.py
+        stdin:
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "no"
+        stdout: "Veredicto: retrasar"
+        exit: 0
+    lanzamiento_5:
+      - run: python3 comprobar_criterios.py
+        stdin:
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+        stdout: "Veredicto: proseguir"
+        exit: 0
+    lanzamiento_6:
+      - run: python3 comprobar_criterios.py
+        stdin:
+          - sdjkjkdskjds
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+        stdout: "Veredicto: proseguir"
+        exit: 0
+    lanzamiento_6:
+      - run: python3 comprobar_criterios.py
+        stdin:
+          - "si"
+          - "si"
+          - "si"
+          - "si"
+          - "no"
+        stdout: "Veredicto: detener"
+        exit: 0
