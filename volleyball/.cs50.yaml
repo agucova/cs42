@@ -1,0 +1,11 @@
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require volleyball.py
+  checks:
+    el programa dice EMPIEZA:
+      - run: python3 hola.py
+        stdout: "EMPIEZA"
+        exit: 0
+submit50:
+  files: *check50_files
