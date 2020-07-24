@@ -2058,3 +2058,5 @@ check50:
           - GANA B
           - A 7 B 9
           - FINAL
+submit50:
+  files: *check50_files
