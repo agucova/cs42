@@ -4,8 +4,2057 @@ check50:
     - !require volleyball.py
   checks:
     el programa dice EMPIEZA:
-      - run: python3 hola.py
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - A
+          - A
+          - A
+          - A
         stdout: "EMPIEZA"
         exit: 0
-submit50:
-  files: *check50_files
+    el programa dice SACA A:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - A
+          - A
+          - A
+          - A
+        stdout: "SACA A"
+        exit: 0
+    el programa dice GANA_A:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - A
+          - A
+          - A
+          - A
+        stdout: "GANA A"
+        exit: 0
+    partida_0:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - B
+          - A
+          - A
+          - A
+          - B
+          - B
+          - A
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA B
+          - A 3 B 0
+          - SACA B
+          - GANA B
+          - A 3 B 1
+          - SACA B
+          - GANA A
+          - A 3 B 1
+          - SACA A
+          - GANA A
+          - A 4 B 1
+          - SACA A
+          - GANA A
+          - A 5 B 1
+          - FINAL
+        exit: 0
+    partida_1:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - A
+          - A
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA A
+          - A 4 B 0
+          - SACA A
+          - GANA A
+          - A 5 B 0
+          - FINAL
+        exit: 0
+    partida_2:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - B
+          - B
+          - B
+          - B
+          - B
+          - A
+          - A
+          - A
+          - A
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA B
+          - A 1 B 1
+          - SACA B
+          - GANA B
+          - A 1 B 2
+          - SACA B
+          - GANA B
+          - A 1 B 3
+          - SACA B
+          - GANA B
+          - A 1 B 4
+          - SACA B
+          - GANA A
+          - A 1 B 4
+          - SACA A
+          - GANA A
+          - A 2 B 4
+          - SACA A
+          - GANA A
+          - A 3 B 4
+          - SACA A
+          - GANA A
+          - A 4 B 4
+          - SACA A
+          - GANA A
+          - A 5 B 4
+          - SACA A
+          - GANA A
+          - A 6 B 4
+          - FINAL
+        exit: 0
+    partida_3:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - A
+          - A
+          - A
+          - B
+          - B
+          - B
+          - B
+          - B
+          - B
+          - A
+          - B
+          - A
+          - A
+          - A
+          - B
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA A
+          - A 4 B 0
+          - SACA A
+          - GANA B
+          - A 4 B 0
+          - SACA B
+          - GANA B
+          - A 4 B 1
+          - SACA B
+          - GANA B
+          - A 4 B 2
+          - SACA B
+          - GANA B
+          - A 4 B 3
+          - SACA B
+          - GANA B
+          - A 4 B 4
+          - SACA B
+          - GANA B
+          - A 4 B 5
+          - SACA B
+          - GANA A
+          - A 4 B 5
+          - SACA A
+          - GANA B
+          - A 4 B 5
+          - SACA B
+          - GANA A
+          - A 4 B 5
+          - SACA A
+          - GANA A
+          - A 5 B 5
+          - SACA A
+          - GANA A
+          - A 6 B 5
+          - SACA A
+          - GANA B
+          - A 6 B 5
+          - SACA B
+          - GANA A
+          - A 6 B 5
+          - SACA A
+          - GANA A
+          - A 7 B 5
+          - FINAL
+        exit: 0
+    partida_4:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - A
+          - B
+          - B
+          - A
+          - A
+          - A
+          - A
+          - A
+          - B
+          - B
+          - B
+          - B
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA A
+          - A 0 B 0
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA A
+          - A 0 B 1
+          - SACA A
+          - GANA A
+          - A 1 B 1
+          - SACA A
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA A
+          - A 3 B 1
+          - SACA A
+          - GANA A
+          - A 4 B 1
+          - SACA A
+          - GANA B
+          - A 4 B 1
+          - SACA B
+          - GANA B
+          - A 4 B 2
+          - SACA B
+          - GANA B
+          - A 4 B 3
+          - SACA B
+          - GANA B
+          - A 4 B 4
+          - SACA B
+          - GANA B
+          - A 4 B 5
+          - SACA B
+          - GANA B
+          - A 4 B 6
+          - FINAL
+        exit: 0
+    partida_5:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - B
+          - A
+          - A
+          - B
+          - A
+          - B
+          - B
+          - A
+          - B
+          - A
+          - B
+          - A
+          - A
+          - B
+          - B
+          - A
+          - B
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA A
+          - A 0 B 1
+          - SACA A
+          - GANA A
+          - A 1 B 1
+          - SACA A
+          - GANA B
+          - A 1 B 1
+          - SACA B
+          - GANA A
+          - A 1 B 1
+          - SACA A
+          - GANA B
+          - A 1 B 1
+          - SACA B
+          - GANA B
+          - A 1 B 2
+          - SACA B
+          - GANA A
+          - A 1 B 2
+          - SACA A
+          - GANA B
+          - A 1 B 2
+          - SACA B
+          - GANA A
+          - A 1 B 2
+          - SACA A
+          - GANA B
+          - A 1 B 2
+          - SACA B
+          - GANA A
+          - A 1 B 2
+          - SACA A
+          - GANA A
+          - A 2 B 2
+          - SACA A
+          - GANA B
+          - A 2 B 2
+          - SACA B
+          - GANA B
+          - A 2 B 3
+          - SACA B
+          - GANA A
+          - A 2 B 3
+          - SACA A
+          - GANA B
+          - A 2 B 3
+          - SACA B
+          - GANA B
+          - A 2 B 4
+          - SACA B
+          - GANA B
+          - A 2 B 5
+          - FINAL
+        exit: 0
+    partida_6:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - A
+          - B
+          - B
+          - A
+          - A
+          - B
+          - A
+          - A
+          - B
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA B
+          - A 2 B 0
+          - SACA B
+          - GANA B
+          - A 2 B 1
+          - SACA B
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA A
+          - A 3 B 1
+          - SACA A
+          - GANA B
+          - A 3 B 1
+          - SACA B
+          - GANA A
+          - A 3 B 1
+          - SACA A
+          - GANA A
+          - A 4 B 1
+          - SACA A
+          - GANA B
+          - A 4 B 1
+          - SACA B
+          - GANA A
+          - A 4 B 1
+          - SACA A
+          - GANA A
+          - A 5 B 1
+          - FINAL
+        exit: 0
+    partida_7:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - A
+          - A
+          - B
+          - A
+          - B
+          - A
+          - A
+          - B
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA B
+          - A 3 B 0
+          - SACA B
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA B
+          - A 3 B 0
+          - SACA B
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA A
+          - A 4 B 0
+          - SACA A
+          - GANA B
+          - A 4 B 0
+          - SACA B
+          - GANA A
+          - A 4 B 0
+          - SACA A
+          - GANA A
+          - A 5 B 0
+          - FINAL
+        exit: 0
+    partida_8:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - B
+          - B
+          - A
+          - A
+          - B
+          - B
+          - A
+          - B
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA B
+          - A 0 B 2
+          - SACA B
+          - GANA A
+          - A 0 B 2
+          - SACA A
+          - GANA A
+          - A 1 B 2
+          - SACA A
+          - GANA B
+          - A 1 B 2
+          - SACA B
+          - GANA B
+          - A 1 B 3
+          - SACA B
+          - GANA A
+          - A 1 B 3
+          - SACA A
+          - GANA B
+          - A 1 B 3
+          - SACA B
+          - GANA B
+          - A 1 B 4
+          - SACA B
+          - GANA B
+          - A 1 B 5
+          - FINAL
+        exit: 0
+    partida_9:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - B
+          - A
+          - B
+          - B
+          - B
+          - B
+          - A
+          - A
+          - A
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA A
+          - A 0 B 1
+          - SACA A
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA B
+          - A 0 B 2
+          - SACA B
+          - GANA B
+          - A 0 B 3
+          - SACA B
+          - GANA B
+          - A 0 B 4
+          - SACA B
+          - GANA A
+          - A 0 B 4
+          - SACA A
+          - GANA A
+          - A 1 B 4
+          - SACA A
+          - GANA A
+          - A 2 B 4
+          - SACA A
+          - GANA B
+          - A 2 B 4
+          - SACA B
+          - GANA B
+          - A 2 B 5
+          - FINAL
+        exit: 0
+    partida_10:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - B
+          - B
+          - B
+          - B
+          - B
+          - A
+          - A
+          - A
+          - A
+          - B
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA B
+          - A 1 B 1
+          - SACA B
+          - GANA B
+          - A 1 B 2
+          - SACA B
+          - GANA B
+          - A 1 B 3
+          - SACA B
+          - GANA B
+          - A 1 B 4
+          - SACA B
+          - GANA A
+          - A 1 B 4
+          - SACA A
+          - GANA A
+          - A 2 B 4
+          - SACA A
+          - GANA A
+          - A 3 B 4
+          - SACA A
+          - GANA A
+          - A 4 B 4
+          - SACA A
+          - GANA B
+          - A 4 B 4
+          - SACA B
+          - GANA B
+          - A 4 B 5
+          - SACA B
+          - GANA B
+          - A 4 B 6
+          - FINAL
+        exit: 0
+    partida_11:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - A
+          - A
+          - A
+          - B
+          - B
+          - B
+          - B
+          - B
+          - B
+          - A
+          - A
+          - A
+          - B
+          - B
+          - B
+          - A
+          - A
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA A
+          - A 4 B 0
+          - SACA A
+          - GANA B
+          - A 4 B 0
+          - SACA B
+          - GANA B
+          - A 4 B 1
+          - SACA B
+          - GANA B
+          - A 4 B 2
+          - SACA B
+          - GANA B
+          - A 4 B 3
+          - SACA B
+          - GANA B
+          - A 4 B 4
+          - SACA B
+          - GANA B
+          - A 4 B 5
+          - SACA B
+          - GANA A
+          - A 4 B 5
+          - SACA A
+          - GANA A
+          - A 5 B 5
+          - SACA A
+          - GANA A
+          - A 6 B 5
+          - SACA A
+          - GANA B
+          - A 6 B 5
+          - SACA B
+          - GANA B
+          - A 6 B 6
+          - SACA B
+          - GANA B
+          - A 6 B 7
+          - SACA B
+          - GANA A
+          - A 6 B 7
+          - SACA A
+          - GANA A
+          - A 7 B 7
+          - SACA A
+          - GANA A
+          - A 8 B 7
+          - SACA A
+          - GANA A
+          - A 9 B 7
+          - FINAL
+        exit: 0
+    partida_12:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - B
+          - B
+          - B
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA B
+          - A 0 B 2
+          - SACA B
+          - GANA B
+          - A 0 B 3
+          - SACA B
+          - GANA B
+          - A 0 B 4
+          - SACA B
+          - GANA B
+          - A 0 B 5
+          - FINAL
+        exit: 0
+    partida_13:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - A
+          - B
+          - A
+          - A
+          - A
+          - A
+          - B
+          - A
+          - A
+          - B
+          - A
+          - B
+          - B
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA A
+          - A 0 B 0
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA A
+          - A 0 B 0
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA B
+          - A 3 B 0
+          - SACA B
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA A
+          - A 4 B 0
+          - SACA A
+          - GANA B
+          - A 4 B 0
+          - SACA B
+          - GANA A
+          - A 4 B 0
+          - SACA A
+          - GANA B
+          - A 4 B 0
+          - SACA B
+          - GANA B
+          - A 4 B 1
+          - SACA B
+          - GANA A
+          - A 4 B 1
+          - SACA A
+          - GANA A
+          - A 5 B 1
+          - FINAL
+        exit: 0
+    partida_14:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - B
+          - B
+          - A
+          - A
+          - A
+          - B
+          - A
+          - B
+          - B
+          - A
+          - B
+          - B
+          - B
+          - A
+          - B
+          - A
+          - B
+          - A
+          - A
+          - B
+          - A
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA B
+          - A 1 B 1
+          - SACA B
+          - GANA A
+          - A 1 B 1
+          - SACA A
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA A
+          - A 3 B 1
+          - SACA A
+          - GANA B
+          - A 3 B 1
+          - SACA B
+          - GANA A
+          - A 3 B 1
+          - SACA A
+          - GANA B
+          - A 3 B 1
+          - SACA B
+          - GANA B
+          - A 3 B 2
+          - SACA B
+          - GANA A
+          - A 3 B 2
+          - SACA A
+          - GANA B
+          - A 3 B 2
+          - SACA B
+          - GANA B
+          - A 3 B 3
+          - SACA B
+          - GANA B
+          - A 3 B 4
+          - SACA B
+          - GANA A
+          - A 3 B 4
+          - SACA A
+          - GANA B
+          - A 3 B 4
+          - SACA B
+          - GANA A
+          - A 3 B 4
+          - SACA A
+          - GANA B
+          - A 3 B 4
+          - SACA B
+          - GANA A
+          - A 3 B 4
+          - SACA A
+          - GANA A
+          - A 4 B 4
+          - SACA A
+          - GANA B
+          - A 4 B 4
+          - SACA B
+          - GANA A
+          - A 4 B 4
+          - SACA A
+          - GANA A
+          - A 5 B 4
+          - SACA A
+          - GANA A
+          - A 6 B 4
+          - FINAL
+        exit: 0
+    partida_15:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - B
+          - B
+          - A
+          - B
+          - A
+          - B
+          - A
+          - A
+          - B
+          - A
+          - A
+          - A
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA B
+          - A 0 B 2
+          - SACA B
+          - GANA A
+          - A 0 B 2
+          - SACA A
+          - GANA B
+          - A 0 B 2
+          - SACA B
+          - GANA A
+          - A 0 B 2
+          - SACA A
+          - GANA B
+          - A 0 B 2
+          - SACA B
+          - GANA A
+          - A 0 B 2
+          - SACA A
+          - GANA A
+          - A 1 B 2
+          - SACA A
+          - GANA B
+          - A 1 B 2
+          - SACA B
+          - GANA A
+          - A 1 B 2
+          - SACA A
+          - GANA A
+          - A 2 B 2
+          - SACA A
+          - GANA A
+          - A 3 B 2
+          - SACA A
+          - GANA A
+          - A 4 B 2
+          - SACA A
+          - GANA A
+          - A 5 B 2
+          - FINAL
+        exit: 0
+    partida_16:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - B
+          - B
+          - B
+          - B
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA B
+          - A 1 B 1
+          - SACA B
+          - GANA B
+          - A 1 B 2
+          - SACA B
+          - GANA B
+          - A 1 B 3
+          - SACA B
+          - GANA B
+          - A 1 B 4
+          - SACA B
+          - GANA B
+          - A 1 B 5
+          - FINAL
+        exit: 0
+    partida_17:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - A
+          - A
+          - B
+          - B
+          - A
+          - B
+          - A
+          - B
+          - B
+          - B
+          - A
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA B
+          - A 3 B 0
+          - SACA B
+          - GANA B
+          - A 3 B 1
+          - SACA B
+          - GANA A
+          - A 3 B 1
+          - SACA A
+          - GANA B
+          - A 3 B 1
+          - SACA B
+          - GANA A
+          - A 3 B 1
+          - SACA A
+          - GANA B
+          - A 3 B 1
+          - SACA B
+          - GANA B
+          - A 3 B 2
+          - SACA B
+          - GANA B
+          - A 3 B 3
+          - SACA B
+          - GANA A
+          - A 3 B 3
+          - SACA A
+          - GANA A
+          - A 4 B 3
+          - SACA A
+          - GANA A
+          - A 5 B 3
+          - FINAL
+        exit: 0
+    partida_18:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - B
+          - A
+          - B
+          - A
+          - B
+          - A
+          - A
+          - A
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA A
+          - A 4 B 0
+          - SACA A
+          - GANA A
+          - A 5 B 0
+          - FINAL
+        exit: 0
+    partida_19:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - A
+          - A
+          - B
+          - B
+          - B
+          - A
+          - B
+          - A
+          - A
+          - B
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA B
+          - A 3 B 0
+          - SACA B
+          - GANA B
+          - A 3 B 1
+          - SACA B
+          - GANA B
+          - A 3 B 2
+          - SACA B
+          - GANA A
+          - A 3 B 2
+          - SACA A
+          - GANA B
+          - A 3 B 2
+          - SACA B
+          - GANA A
+          - A 3 B 2
+          - SACA A
+          - GANA A
+          - A 4 B 2
+          - SACA A
+          - GANA B
+          - A 4 B 2
+          - SACA B
+          - GANA A
+          - A 4 B 2
+          - SACA A
+          - GANA A
+          - A 5 B 2
+          - FINAL
+        exit: 0
+    partida_20:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - A
+          - B
+          - B
+          - A
+          - A
+          - B
+          - A
+          - A
+          - B
+          - A
+          - B
+          - A
+          - B
+          - A
+          - B
+          - A
+          - B
+          - B
+          - B
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA A
+          - A 0 B 0
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA A
+          - A 0 B 1
+          - SACA A
+          - GANA A
+          - A 1 B 1
+          - SACA A
+          - GANA B
+          - A 1 B 1
+          - SACA B
+          - GANA A
+          - A 1 B 1
+          - SACA A
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA B
+          - A 2 B 1
+          - SACA B
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA B
+          - A 2 B 1
+          - SACA B
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA B
+          - A 2 B 1
+          - SACA B
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA B
+          - A 2 B 1
+          - SACA B
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA B
+          - A 2 B 1
+          - SACA B
+          - GANA B
+          - A 2 B 2
+          - SACA B
+          - GANA B
+          - A 2 B 3
+          - SACA B
+          - GANA B
+          - A 2 B 4
+          - SACA B
+          - GANA B
+          - A 2 B 5
+          - FINAL
+        exit: 0
+    partida_21:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - A
+          - A
+          - B
+          - A
+          - B
+          - A
+          - A
+          - B
+          - B
+          - A
+          - B
+          - A
+          - A
+          - A
+          - B
+          - A
+          - B
+          - A
+          - B
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA A
+          - A 0 B 0
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA B
+          - A 2 B 0
+          - SACA B
+          - GANA B
+          - A 2 B 1
+          - SACA B
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA B
+          - A 2 B 1
+          - SACA B
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA A
+          - A 3 B 1
+          - SACA A
+          - GANA A
+          - A 4 B 1
+          - SACA A
+          - GANA B
+          - A 4 B 1
+          - SACA B
+          - GANA A
+          - A 4 B 1
+          - SACA A
+          - GANA B
+          - A 4 B 1
+          - SACA B
+          - GANA A
+          - A 4 B 1
+          - SACA A
+          - GANA B
+          - A 4 B 1
+          - SACA B
+          - GANA A
+          - A 4 B 1
+          - SACA A
+          - GANA A
+          - A 5 B 1
+          - FINAL
+        exit: 0
+    partida_22:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - B
+          - B
+          - B
+          - B
+          - A
+          - A
+          - B
+          - A
+          - B
+          - A
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA B
+          - A 0 B 2
+          - SACA B
+          - GANA B
+          - A 0 B 3
+          - SACA B
+          - GANA B
+          - A 0 B 4
+          - SACA B
+          - GANA A
+          - A 0 B 4
+          - SACA A
+          - GANA A
+          - A 1 B 4
+          - SACA A
+          - GANA B
+          - A 1 B 4
+          - SACA B
+          - GANA A
+          - A 1 B 4
+          - SACA A
+          - GANA B
+          - A 1 B 4
+          - SACA B
+          - GANA A
+          - A 1 B 4
+          - SACA A
+          - GANA B
+          - A 1 B 4
+          - SACA B
+          - GANA B
+          - A 1 B 5
+          - FINAL
+        exit: 0
+    partida_23:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - A
+          - A
+          - B
+          - A
+          - B
+          - B
+          - B
+          - B
+          - A
+          - B
+          - B
+          - A
+          - A
+          - A
+          - B
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA B
+          - A 3 B 0
+          - SACA B
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA B
+          - A 3 B 0
+          - SACA B
+          - GANA B
+          - A 3 B 1
+          - SACA B
+          - GANA B
+          - A 3 B 2
+          - SACA B
+          - GANA B
+          - A 3 B 3
+          - SACA B
+          - GANA A
+          - A 3 B 3
+          - SACA A
+          - GANA B
+          - A 3 B 3
+          - SACA B
+          - GANA B
+          - A 3 B 4
+          - SACA B
+          - GANA A
+          - A 3 B 4
+          - SACA A
+          - GANA A
+          - A 4 B 4
+          - SACA A
+          - GANA A
+          - A 5 B 4
+          - SACA A
+          - GANA B
+          - A 5 B 4
+          - SACA B
+          - GANA A
+          - A 5 B 4
+          - SACA A
+          - GANA A
+          - A 6 B 4
+          - FINAL
+        exit: 0
+    partida_24:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - A
+          - B
+          - B
+          - B
+          - B
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA A
+          - A 0 B 0
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA B
+          - A 0 B 2
+          - SACA B
+          - GANA B
+          - A 0 B 3
+          - SACA B
+          - GANA B
+          - A 0 B 4
+          - SACA B
+          - GANA B
+          - A 0 B 5
+          - FINAL
+        exit: 0
+    partida_25:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - A
+          - A
+          - B
+          - B
+          - B
+          - A
+          - A
+          - B
+          - B
+          - B
+          - B
+          - A
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA A
+          - A 2 B 0
+          - SACA A
+          - GANA A
+          - A 3 B 0
+          - SACA A
+          - GANA B
+          - A 3 B 0
+          - SACA B
+          - GANA B
+          - A 3 B 1
+          - SACA B
+          - GANA B
+          - A 3 B 2
+          - SACA B
+          - GANA A
+          - A 3 B 2
+          - SACA A
+          - GANA A
+          - A 4 B 2
+          - SACA A
+          - GANA B
+          - A 4 B 2
+          - SACA B
+          - GANA B
+          - A 4 B 3
+          - SACA B
+          - GANA B
+          - A 4 B 4
+          - SACA B
+          - GANA B
+          - A 4 B 5
+          - SACA B
+          - GANA A
+          - A 4 B 5
+          - SACA A
+          - GANA B
+          - A 4 B 5
+          - SACA B
+          - GANA B
+          - A 4 B 6
+          - FINAL
+        exit: 0
+    partida_26:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - A
+          - B
+          - B
+          - B
+          - A
+          - A
+          - A
+          - B
+          - A
+          - B
+          - A
+          - A
+          - B
+          - B
+          - B
+          - A
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA A
+          - A 0 B 0
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA B
+          - A 0 B 2
+          - SACA B
+          - GANA A
+          - A 0 B 2
+          - SACA A
+          - GANA A
+          - A 1 B 2
+          - SACA A
+          - GANA A
+          - A 2 B 2
+          - SACA A
+          - GANA B
+          - A 2 B 2
+          - SACA B
+          - GANA A
+          - A 2 B 2
+          - SACA A
+          - GANA B
+          - A 2 B 2
+          - SACA B
+          - GANA A
+          - A 2 B 2
+          - SACA A
+          - GANA A
+          - A 3 B 2
+          - SACA A
+          - GANA B
+          - A 3 B 2
+          - SACA B
+          - GANA B
+          - A 3 B 3
+          - SACA B
+          - GANA B
+          - A 3 B 4
+          - SACA B
+          - GANA A
+          - A 3 B 4
+          - SACA A
+          - GANA B
+          - A 3 B 4
+          - SACA B
+          - GANA B
+          - A 3 B 5
+          - FINAL
+        exit: 0
+    partida_27:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - B
+          - B
+          - A
+          - A
+          - A
+          - B
+          - A
+          - B
+          - A
+          - A
+          - B
+          - B
+          - A
+          - B
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA B
+          - A 1 B 1
+          - SACA B
+          - GANA A
+          - A 1 B 1
+          - SACA A
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA A
+          - A 3 B 1
+          - SACA A
+          - GANA B
+          - A 3 B 1
+          - SACA B
+          - GANA A
+          - A 3 B 1
+          - SACA A
+          - GANA B
+          - A 3 B 1
+          - SACA B
+          - GANA A
+          - A 3 B 1
+          - SACA A
+          - GANA A
+          - A 4 B 1
+          - SACA A
+          - GANA B
+          - A 4 B 1
+          - SACA B
+          - GANA B
+          - A 4 B 2
+          - SACA B
+          - GANA A
+          - A 4 B 2
+          - SACA A
+          - GANA B
+          - A 4 B 2
+          - SACA B
+          - GANA A
+          - A 4 B 2
+          - SACA A
+          - GANA A
+          - A 5 B 2
+          - FINAL
+        exit: 0
+    partida_28:
+      - run: python3 volleyball.py
+        stdin:
+          - A
+          - B
+          - A
+          - B
+          - B
+          - A
+          - B
+          - A
+          - B
+          - B
+          - B
+          - A
+          - B
+          - A
+          - A
+          - A
+          - A
+          - B
+          - A
+          - A
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA A
+          - A 1 B 0
+          - SACA A
+          - GANA B
+          - A 1 B 0
+          - SACA B
+          - GANA B
+          - A 1 B 1
+          - SACA B
+          - GANA A
+          - A 1 B 1
+          - SACA A
+          - GANA B
+          - A 1 B 1
+          - SACA B
+          - GANA A
+          - A 1 B 1
+          - SACA A
+          - GANA B
+          - A 1 B 1
+          - SACA B
+          - GANA B
+          - A 1 B 2
+          - SACA B
+          - GANA B
+          - A 1 B 3
+          - SACA B
+          - GANA A
+          - A 1 B 3
+          - SACA A
+          - GANA B
+          - A 1 B 3
+          - SACA B
+          - GANA A
+          - A 1 B 3
+          - SACA A
+          - GANA A
+          - A 2 B 3
+          - SACA A
+          - GANA A
+          - A 3 B 3
+          - SACA A
+          - GANA A
+          - A 4 B 3
+          - SACA A
+          - GANA B
+          - A 4 B 3
+          - SACA B
+          - GANA A
+          - A 4 B 3
+          - SACA A
+          - GANA A
+          - A 5 B 3
+          - FINAL
+        exit: 0
+    partida_29:
+      - run: python3 volleyball.py
+        stdin:
+          - B
+          - B
+          - A
+          - B
+          - A
+          - A
+          - A
+          - B
+          - A
+          - B
+          - A
+          - B
+          - B
+          - A
+          - B
+          - B
+          - A
+          - B
+          - A
+          - B
+          - B
+          - A
+          - A
+          - A
+          - A
+          - B
+          - B
+          - B
+          - A
+          - A
+          - A
+          - B
+          - B
+          - B
+          - B
+        stdout:
+          - EMPIEZA
+          - SACA A
+          - GANA B
+          - A 0 B 0
+          - SACA B
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA A
+          - A 0 B 1
+          - SACA A
+          - GANA B
+          - A 0 B 1
+          - SACA B
+          - GANA A
+          - A 0 B 1
+          - SACA A
+          - GANA A
+          - A 1 B 1
+          - SACA A
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA B
+          - A 2 B 1
+          - SACA B
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA B
+          - A 2 B 1
+          - SACA B
+          - GANA A
+          - A 2 B 1
+          - SACA A
+          - GANA B
+          - A 2 B 1
+          - SACA B
+          - GANA B
+          - A 2 B 2
+          - SACA B
+          - GANA A
+          - A 2 B 2
+          - SACA A
+          - GANA B
+          - A 2 B 2
+          - SACA B
+          - GANA B
+          - A 2 B 3
+          - SACA B
+          - GANA A
+          - A 2 B 3
+          - SACA A
+          - GANA B
+          - A 2 B 3
+          - SACA B
+          - GANA A
+          - A 2 B 3
+          - SACA A
+          - GANA B
+          - A 2 B 3
+          - SACA B
+          - GANA B
+          - A 2 B 4
+          - SACA B
+          - GANA A
+          - A 2 B 4
+          - SACA A
+          - GANA A
+          - A 3 B 4
+          - SACA A
+          - GANA A
+          - A 4 B 4
+          - SACA A
+          - GANA A
+          - A 5 B 4
+          - SACA A
+          - GANA B
+          - A 5 B 4
+          - SACA B
+          - GANA B
+          - A 5 B 5
+          - SACA B
+          - GANA B
+          - A 5 B 6
+          - SACA B
+          - GANA A
+          - A 5 B 6
+          - SACA A
+          - GANA A
+          - A 6 B 6
+          - SACA A
+          - GANA A
+          - A 7 B 6
+          - SACA A
+          - GANA B
+          - A 7 B 6
+          - SACA B
+          - GANA B
+          - A 7 B 7
+          - SACA B
+          - GANA B
+          - A 7 B 8
+          - SACA B
+          - GANA B
+          - A 7 B 9
+          - FINAL
