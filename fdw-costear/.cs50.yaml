@@ -1,0 +1,216 @@
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require costear.py
+  checks:
+    muro_0:
+      - run: python3 costear.py
+        stdin:
+          - V--V----V--P--VV---V------V--P--V--V
+        stdout:
+          - 60
+        exit: 0
+    muro_1:
+      - run: python3 costear.py
+        stdin:
+          - V--P--V--P--V
+        stdout:
+          - 20
+        exit: 0
+    muro_2:
+      - run: python3 costear.py
+        stdin:
+          - V-V
+        stdout:
+          - 10
+        exit: 0
+    muro_3:
+      - run: python3 costear.py
+        stdin:
+          - V--P---P--V
+        stdout:
+          - 30
+        exit: 0
+    muro_4:
+      - run: python3 costear.py
+        stdin:
+          - V---P--P-V-V-VP-V------V
+        stdout:
+          - 60
+        exit: 0
+    muro_5:
+      - run: python3 costear.py
+        stdin:
+          - V---P-P---V
+        stdout:
+          - 30
+        exit: 0
+    muro_6:
+      - run: python3 costear.py
+        stdin:
+          - V-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V-V
+        stdout:
+          - 10
+        exit: 0
+    muro_7:
+      - run: python3 costear.py
+        stdin:
+          - VVVPPPVV-VVVPPPVVV
+        stdout:
+          - 10
+        exit: 0
+    muro_8:
+      - run: python3 costear.py
+        stdin:
+          - V-P--V--V
+        stdout:
+          - 20
+        exit: 0
+    muro_9:
+      - run: python3 costear.py
+        stdin:
+          - V---V--P-----P-V
+        stdout:
+          - 50
+        exit: 0
+    muro_10:
+      - run: python3 costear.py
+        stdin:
+          - V-P--P--P-P--P--P---P--P-----------VVVV
+        stdout:
+          - 110
+        exit: 0
+    muro_11:
+      - run: python3 costear.py
+        stdin:
+          - V--------------------V
+        stdout:
+          - 200
+        exit: 0
+    muro_12:
+      - run: python3 costear.py
+        stdin:
+          - V-P-VV-P-P--------------------VV-PVVP-V
+        stdout:
+          - 200
+        exit: 0
+    muro_13:
+      - run: python3 costear.py
+        stdin:
+          - VV-V
+        stdout:
+          - 10
+        exit: 0
+    muro_14:
+      - run: python3 costear.py
+        stdin:
+          - VV--P--P--V--V--P--V
+        stdout:
+          - 20
+        exit: 0
+    muro_15:
+      - run: python3 costear.py
+        stdin:
+          - V--P---P--V
+        stdout:
+          - 30
+        exit: 0
+    muro_16:
+      - run: python3 costear.py
+        stdin:
+          - VVV--VVV--P-V
+        stdout:
+          - 20
+        exit: 0
+    muro_17:
+      - run: python3 costear.py
+        stdin:
+          - PV----------PV--PVV-V
+        stdout:
+          - 100
+        exit: 0
+    muro_18:
+      - run: python3 costear.py
+        stdin:
+          - V-V-V-V-V-V-V-P
+        stdout:
+          - 10
+        exit: 0
+    muro_19:
+      - run: python3 costear.py
+        stdin:
+          - VP-PV----------------PVPVPVV
+        stdout:
+          - 160
+        exit: 0
+    muro_20:
+      - run: python3 costear.py
+        stdin:
+          - V-V--VVV-VV-P-----PV-PV-P
+        stdout:
+          - 50
+        exit: 0
+    muro_21:
+      - run: python3 costear.py
+        stdin:
+          - P-P-P-V-V-V-V-VV-----P-P-PV-PV
+        stdout:
+          - 50
+        exit: 0
+    muro_22:
+      - run: python3 costear.py
+        stdin:
+          - V-V-V-V-V-VP-P-P-P-P-P-PV-PVP-P
+        stdout:
+          - 10
+        exit: 0
+    muro_23:
+      - run: python3 costear.py
+        stdin:
+          - P-P-P-P-VP-VP-V-V-V-PV-PV--PV-P
+        stdout:
+          - 20
+        exit: 0
+    muro_24:
+      - run: python3 costear.py
+        stdin:
+          - V-P-V-PV-P-P---V-V-V-V-V
+        stdout:
+          - 30
+        exit: 0
+    muro_25:
+      - run: python3 costear.py
+        stdin:
+          - P-P
+        stdout:
+          - 10
+        exit: 0
+    muro_26:
+      - run: python3 costear.py
+        stdin:
+          - V-V-V-V-V-V-V-V-V-VV--V-VP
+        stdout:
+          - 20
+        exit: 0
+    muro_27:
+      - run: python3 costear.py
+        stdin:
+          - V--------------------------P
+        stdout:
+          - 260
+        exit: 0
+    muro_28:
+      - run: python3 costear.py
+        stdin:
+          - P-------------V-----------P
+        stdout:
+          - 130
+        exit: 0
+    muro_29:
+      - run: python3 costear.py
+        stdin:
+          - V----V-----V----V----V---V---V--P
+        stdout:
+          - 50
+submit50:
+  files: *check50_files

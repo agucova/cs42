@@ -1,0 +1,247 @@
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require sepuede.py
+
+  checks:
+    muro_0:
+      - run: python3 sepuede.py
+        stdin:
+          - V--V----V--P--VV---V------V--P--V--V
+          - 5
+        stdout:
+          - True
+        exit: 0
+    muro_1:
+      - run: python3 sepuede.py
+        stdin:
+          - V--V----V--P--VV---V------V--P--V--V
+          - 3
+        stdout:
+          - False
+        exit: 0
+    muro_2:
+      - run: python3 sepuede.py
+        stdin:
+          - V--V----V--P--VV---V------V--P--V--V
+          - 4
+        stdout:
+          - False
+        exit: 0
+    muro_3:
+      - run: python3 sepuede.py
+        stdin:
+          - V--V----V--P--VV---V------V--P--V--V
+          - 2
+        stdout:
+          - False
+        exit: 0
+    muro_4:
+      - run: python3 sepuede.py
+        stdin:
+          - V--PP--V---V
+          - 5
+        stdout:
+          - False
+        exit: 0
+    muro_5:
+      - run: python3 sepuede.py
+        stdin:
+          - V-------PP-PPP-VV-----V
+          - 3
+        stdout:
+          - True
+        exit: 0
+    muro_6:
+      - run: python3 sepuede.py
+        stdin:
+          - V-------PP-PPP-VV-----V
+          - 6
+        stdout:
+          - True
+        exit: 0
+    muro_7:
+      - run: python3 sepuede.py
+        stdin:
+          - V-------PP-PPP-VV-----V
+          - 5
+        stdout:
+          - True
+        exit: 0
+    muro_8:
+      - run: python3 sepuede.py
+        stdin:
+          - V-------PP-PPP-VV-----V
+          - 4
+        stdout:
+          - True
+        exit: 0
+    muro_9:
+      - run: python3 sepuede.py
+        stdin:
+          - V-------PP-PPP-VV-----V
+          - 18
+        stdout:
+          - True
+        exit: 0
+    muro_10:
+      - run: python3 sepuede.py
+        stdin:
+          - V-------PP-PPP-VV-----V
+          - 19
+        stdout:
+          - True
+        exit: 0
+    muro_11:
+      - run: python3 sepuede.py
+        stdin:
+          - V-------PP-PPP-VV-----V
+          - 14
+        stdout:
+          - False
+        exit: 0
+    muro_12:
+      - run: python3 sepuede.py
+        stdin:
+          - V-------PP-PPP-VV-----V
+          - 13
+        stdout:
+          - False
+        exit: 0
+    muro_13:
+      - run: python3 sepuede.py
+        stdin:
+          - V---V--V-PP-PPP-V
+          - 2
+        stdout:
+          - True
+        exit: 0
+    muro_14:
+      - run: python3 sepuede.py
+        stdin:
+          - V---V--V-PP-PPP-V
+          - 3
+        stdout:
+          - False
+        exit: 0
+    muro_15:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 5
+        stdout:
+          - True
+        exit: 0
+    muro_16:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 6
+        stdout:
+          - True
+        exit: 0
+    muro_17:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 4
+        stdout:
+          - True
+        exit: 0
+    muro_18:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 7
+        stdout:
+          - True
+        exit: 0
+    muro_19:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 8
+        stdout:
+          - False
+        exit: 0
+    muro_20:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 3
+        stdout:
+          - False
+        exit: 0
+    muro_21:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 9
+        stdout:
+          - False
+        exit: 0
+    muro_22:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 14
+        stdout:
+          - True
+        exit: 0
+    muro_23:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 15
+        stdout:
+          - True
+        exit: 0
+    muro_24:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 16
+        stdout:
+          - False
+        exit: 0
+    muro_25:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 10
+        stdout:
+          - False
+        exit: 0
+    muro_26:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 11
+        stdout:
+          - False
+        exit: 0
+    muro_27:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 23
+        stdout:
+          - True
+        exit: 0
+    muro_28:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 24
+        stdout:
+          - True
+        exit: 0
+    muro_29:
+      - run: python3 sepuede.py
+        stdin:
+          - VPV------VPPV----VPPPV----VV---VPV
+          - 25
+        stdout:
+          - False
+submit50:
+  files: *check50_files
