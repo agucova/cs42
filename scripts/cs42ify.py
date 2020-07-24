@@ -58,4 +58,8 @@ with open(nombre_archivo + ".cs50.yaml", mode=modo) as checks:
         ## EXIT
         checks.write(padding_std + "exit: 0" + "\n")
         check += 1
-    print("Archivo guardado.")
+
+    checks.write("submit50:\n")
+    checks.write("  files: *check50_files\n")
+
+print("Archivo guardado.")
