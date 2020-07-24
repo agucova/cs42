@@ -13,7 +13,7 @@ if modo not in ["a", "w"]:
 if modo == "a":
     desde = int(input("desde: ").strip())
 
-with open(nombre_archivo + ".cs50.yaml", mode=modo) as checks:
+with open(".cs50.yaml", mode=modo) as checks:
     if modo == "w":
         checks.write("check50:\n")
         checks.write("  files: &check50_files\n")
