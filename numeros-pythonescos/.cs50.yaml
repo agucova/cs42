@@ -1,0 +1,209 @@
+check50:
+  files: &check50_files
+    - !exclude "*"
+    - !require numeros_pythonescos.py
+  checks:
+    numero_0:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 5
+        stdout:
+          - False
+        exit: 0
+    numero_1:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 1
+        stdout:
+          - True
+        exit: 0
+    numero_2:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 7
+        stdout:
+          - True
+        exit: 0
+    numero_3:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 130
+        stdout:
+          - True
+        exit: 0
+    numero_4:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 131
+        stdout:
+          - False
+        exit: 0
+    numero_5:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 167
+        stdout:
+          - True
+        exit: 0
+    numero_6:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 193
+        stdout:
+          - True
+        exit: 0
+    numero_7:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 191
+        stdout:
+          - False
+        exit: 0
+    numero_8:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 105
+        stdout:
+          - False
+        exit: 0
+    numero_9:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 1920
+        stdout:
+          - True
+        exit: 0
+    numero_10:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 1967
+        stdout:
+          - True
+        exit: 0
+    numero_11:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 1932
+        stdout:
+          - False
+        exit: 0
+    numero_12:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 153117
+        stdout:
+          - True
+        exit: 0
+    numero_13:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 150448
+        stdout:
+          - False
+        exit: 0
+    numero_14:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 123487788
+        stdout:
+          - True
+        exit: 0
+    numero_15:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 123487789
+        stdout:
+          - False
+        exit: 0
+    numero_16:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 123487887
+        stdout:
+          - True
+        exit: 0
+    numero_17:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 123487878
+        stdout:
+          - True
+        exit: 0
+    numero_18:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 16
+        stdout:
+          - False
+        exit: 0
+    numero_19:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 13
+        stdout:
+          - True
+        exit: 0
+    numero_20:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 2210
+        stdout:
+          - False
+        exit: 0
+    numero_21:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 2206
+        stdout:
+          - True
+        exit: 0
+    numero_22:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 172738
+        stdout:
+          - True
+        exit: 0
+    numero_23:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 172751
+        stdout:
+          - True
+        exit: 0
+    numero_24:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 172794
+        stdout:
+          - False
+        exit: 0
+    numero_25:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 172716
+        stdout:
+          - False
+        exit: 0
+    numero_26:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 1000
+        stdout:
+          - True
+        exit: 0
+    numero_27:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 100000
+        stdout:
+          - True
+        exit: 0
+    numero_28:
+      - run: python3 numeros_pythonescos.py
+        stdin:
+          - 100027998
+        stdout:
+          - True
+submit50:
+  files: *check50_files
