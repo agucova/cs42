@@ -11,7 +11,6 @@ def ciegos(m, k):
             tramo = 0
     suma = 0
     for t in tramos:
-
         if t >= k:
             dif = t - k
             suma += dif + 1
